@@ -12,7 +12,9 @@ STATIC_URL = "/static/"
 
 # This should change if you want generate urls in emails
 # for external dns.
-SITES["front"]["domain"] = "10.8.8.5:80"
+#SITES["front"]["domain"] = "10.8.8.5:80"
+SITES["front"]["scheme"] = "http"
+SITES["front"]["domain"] = "taiga.cedille.xyz:80"
 
 DEBUG = True
 PUBLIC_REGISTER_ENABLED = True
