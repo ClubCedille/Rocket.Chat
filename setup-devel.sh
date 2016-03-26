@@ -24,3 +24,5 @@ source ./scripts/setup-python.sh
 source ./scripts/setup-frontend.sh
 source ./scripts/setup-backend.sh
 
+# Setup Plugin
+source ./scripts/setup-github-auth.sh

@@ -14,8 +14,10 @@ cat > /tmp/conf.json <<EOF
     "privacyPolicyUrl": null,
     "termsOfServiceUrl": null,
     "maxUploadFileSize": null,
-    "gitHubClientId": null,
-    "contribPlugins": []
+    "gitHubClientId": EDIT_ME,
+    "contribPlugins": [
+        "/plugins/github-auth/github-auth.json"
+    ]
 }
 EOF
 

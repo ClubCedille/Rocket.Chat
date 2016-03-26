@@ -29,6 +29,16 @@ SERVER_EMAIL = DEFAULT_FROM_EMAIL
 #EMAIL_HOST_PASSWORD = ""
 #EMAIL_PORT = 25
 
+
+#########GITHUB_AUTH_PLUGINS ############
+# USER : CLUB_CEDILLE
+
+INSTALLED_APPS += ["taiga_contrib_github_auth"]
+
+# Get these from https://github.com/settings/developers
+GITHUB_API_CLIENT_ID = "EDIT_ME"
+GITHUB_API_CLIENT_SECRET = "EDIT_ME"
+
 EOF
 
 if [ ! -e ~/taiga-back ]; then
@@ -48,6 +58,7 @@ if [ ! -e ~/taiga-back ]; then
     workon taiga
 
     pip install -r requirements.txt
+    pip install taiga-contrib-github-auth
     python manage.py migrate --noinput
     python manage.py compilemessages
     python manage.py collectstatic --noinput
